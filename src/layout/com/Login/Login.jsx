@@ -28,15 +28,15 @@ const Login = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary">Login</button>
+                                <button className="btn bg-lime-300">Login</button>
                             </div>
-                            <div className="mt-3">
-                                <hr className=" border-red-500" />
-                                <p>Or</p>
-                                <hr className=" border-slate-950" />
+                            <div className="mt-3 grid grid-cols-3 items-center text-sm text-red-300">
+                                <hr className=" border-lime-300" />
+                                <p className="text-center">Or</p>
+                                <hr className=" border-lime-300" />
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary">Google</button>
+                                <button className="btn bg-lime-300">Google</button>
                             </div>
                         </form>
                     </div>
