@@ -1,3 +1,4 @@
+import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 
 
@@ -36,8 +37,9 @@ const Login = () => {
                                 <p className="text-center">Or</p>
                                 <hr className=" border-lime-300" />
                             </div>
-                            <div className="form-control mt-6">
-                                <button className="btn bg-lime-300">Google</button>
+                            <div className="form-control mt-3 relative">
+                                <FcGoogle className=" absolute left-12 lg:left-16 bottom-[17px] " />
+                                <input type="submit" value='Sign Up with Google' className="btn bg-lime-300 items-center" />
                             </div>
                             <div className="mt-3">
                                 <hr className=" border-lime-300" />

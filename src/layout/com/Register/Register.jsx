@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import { FcGoogle } from 'react-icons/fc';
 
 const Register = () => {
     return (
@@ -47,14 +47,15 @@ const Register = () => {
                                 <p className="text-center">Or</p>
                                 <hr className=" border-lime-300" />
                             </div>
-                            <div className="form-control mt-6">
-                                <input type="submit" value="Sign Up with Google" className="btn bg-lime-300" />
+                            <div className="form-control mt-3 relative">
+                                <FcGoogle className=" absolute left-12 lg:left-16 bottom-[17px] " />
+                                <input type="submit" value='Sign Up with Google' className="btn bg-lime-300 items-center" />
                             </div>
                             <div className="mt-3">
                                 <hr className=" border-lime-300" />
                             </div>
                             <label className="label">
-                                <p className="label-text-alt">If you a new user? <Link to='/register' className="label-text-alt link link-hover text-lime-300 font-semibold text-lg"> Register</Link></p>
+                                <p className="label-text-alt">If you already register? <Link to='/login' className="label-text-alt link link-hover text-lime-300 font-semibold text-lg"> Login</Link></p>
                             </label>
                         </form>
                     </div>
