@@ -2,6 +2,18 @@ import { Link } from "react-router-dom";
 import { FcGoogle } from 'react-icons/fc';
 
 const Register = () => {
+
+    const handleRegister = event => {
+        event.preventDefault();
+        const form = event.target;
+        const firstName = form.firstname.value;
+        const lastName = form.lastname.value;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        console.log(firstName, lastName, email, password);
+    }
+
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row w-full">
@@ -12,32 +24,32 @@ const Register = () => {
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="card-body">
                         <h1 className="text-5xl font-bold">SignUp now!</h1>
-                        <form>
+                        <form onSubmit={handleRegister}>
                             <div className="grid grid-cols-2 gap-2">
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">First Name</span>
                                     </label>
-                                    <input type="text" placeholder="email" className="input input-bordered" />
+                                    <input type="text" placeholder="first name" name="firstname" className="input input-bordered" />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Last Name</span>
                                     </label>
-                                    <input type="text" placeholder="email" className="input input-bordered" />
+                                    <input type="text" placeholder="last name" name="lastname" className="input input-bordered" />
                                 </div>
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="text" placeholder="email" className="input input-bordered" />
+                                <input type="text" placeholder="email" name="email" className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="text" placeholder="password" className="input input-bordered" />
+                                <input type="text" placeholder="password" name="password" className="input input-bordered" />
                             </div>
                             <div className="form-control mt-6">
                                 <input type="submit" value="Sign Up" className="btn bg-lime-300" />
