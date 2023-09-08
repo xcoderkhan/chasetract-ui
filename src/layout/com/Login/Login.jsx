@@ -49,7 +49,7 @@ const Login = () => {
                             </div>
                             <div className="form-control mt-3 relative">
                                 <FcGoogle className=" absolute left-12 lg:left-16 bottom-[17px] " />
-                                <input type="submit" value='Sign Up with Google' className="btn bg-lime-300 items-center" />
+                                <input type="submit" value='Login with Google' className="btn bg-lime-300 items-center" />
                             </div>
                             <div className="mt-3">
                                 <hr className=" border-lime-300" />
