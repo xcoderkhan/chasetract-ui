@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
 import { FcGoogle } from 'react-icons/fc';
+import { useContext } from "react";
+import { AuthContext } from "../../../routes/Auth/AuthProviders/AuthProviders";
 
 const Register = () => {
+
+    const { createUser } = useContext(AuthContext);
+    console.log(createUser);
 
     const handleRegister = event => {
         event.preventDefault();
@@ -12,6 +17,16 @@ const Register = () => {
         const password = form.password.value;
 
         console.log(firstName, lastName, email, password);
+        createUser(email, password)
+            .then(result => {
+                const regUser = result.user;
+                console.log(regUser);
+                form.reset();
+            })
+            .catch(error => {
+                console.log(error);
+            })
+
     }
 
     return (
