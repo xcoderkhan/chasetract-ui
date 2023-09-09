@@ -4,6 +4,8 @@ import Home from "../../layout/Home/Home/Home";
 import ErrorPage from "../../layout/ErrorPage/ErrorPage";
 import Login from "../../layout/com/Login/Login";
 import Register from "../../layout/com/Register/Register";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import Dashbord from "../../layout/Dashbord/Dashbord";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +24,10 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/dashbord',
+                element: <PrivateRoute><Dashbord /></PrivateRoute>
             }
         ]
     }
